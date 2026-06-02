@@ -33,10 +33,20 @@ Lựa chọn của bạn là: """))
             if manager == "":
                 print("chưa có dữ liệu nhân sự")
             print(f"{'ID':<5}|{'TÊN NHÂN VIÊN':<25}|{'MỨC LƯƠNG':<10}")
-            print(f"{employee['id']:<5}|{employee['name']:<25}|{employee['salary']:<10}")
+            print(f"{manager['id']:<5}|{manager['name']:<25}|{manager['salary']:<10}")
         case 3:
             sreach_id = input("nhập vào id cần tìm kiếm: ")
-            if not sreach_id == employee['id']:
-                print("Không tìm thấy nhân viên có ID ",sreach_id)
-            elif sreach_id == employee['id']:
-                
+            sreach = False
+            for emp in manager:
+                if emp == sreach_id:
+                    print(f"{emp['id']} | {emp['name']} | {emp['salary']} ")
+                    sreach = True
+                    break
+            if not sreach:
+                print("không tìm thấy nhân viên")
+        case 4:
+            print()
+        case 5:
+            print("đã thoát ctrinh")
+            break
+
