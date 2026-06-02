@@ -1,5 +1,5 @@
 manager = []
-next_id = 100 
+next_id = 101
 
 while True:
     choice = int(input("""QUẢN LÝ NHÂN SỰ - STAFF MANAGER
